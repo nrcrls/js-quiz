@@ -1,7 +1,7 @@
 const correctAnswers = ['A', 'D', 'B', 'A'];
 
 const form = document.querySelector('.quiz-form');
-const score = document.querySelector('.score');
+const result = document.querySelector('.result');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -16,4 +16,6 @@ form.addEventListener('submit', event => {
     }
   });
 
+  result.textContent = `${score}%`;
+  result.classList.remove('hidden');
 });
